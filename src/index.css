@@ -1,4 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  background-color: #282c34;
+  color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +16,125 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  text-align: center;
+}
+
+.header {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1.8vmin);
+}
+
+
+.logo {
+  height: 30vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form {
+  display: grid;
+  width: 75%;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  background-color: #313641;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.75);
+  padding: 3rem;
+}
+
+.label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.input {
+  font-size: 1.6rem;
+  padding: 0.5rem 1.8rem;
+  line-height: 2.4rem;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+.button {
+  background-color: rgba(0,0,0,0.65);
+  color: white;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(0,0,0,0.65);
+  border-radius: 14px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.button:hover {
+  background-color: rgba(0,0,0,0.85);
+}
+
+@media (min-width:786px){
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+}
+
+.card-list {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 30%;
+  border-radius: 10px;
+  background-color: #313641;
+  box-shadow:  1px 1px 5px rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.75);
+  padding: 2rem 4rem;
+  margin: 0 .5rem 2rem;
+}
+
+.card--title {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.card--image {
+  margin: 0 auto;
+  display: block;
 }
